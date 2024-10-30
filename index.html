@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda de Contatos</title>
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="createleft">
+            <h1>BEM VINDO</h1>
+            <div class="image-placeholder"></div> 
+            <h4>Cadastre-se:</h4>
+            <a href="cadastro.html"><button>Criar conta</button></a>
+        </div>
+        
+        <div class="loginright">
+            <h1>FAÇA O LOGIN</h1>
+            <form>
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" placeholder="insira seu e-mail" required>
+                
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" placeholder="insira sua senha" required>
+                
+                <div class="options">
+                    <label>
+                        <input type="checkbox" id="relembre" name="relembre" checked>
+                        Relembre-me
+                    </label>
+                    <button type="button">Esqueceu a senha?</button>
+                </div>
+                
+                <button type="submit">Entrar</button>
+                
+                <h4>Logar com:</h4>
+                <button type="button">Facebook</button>
+                <button type="button">Google</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
