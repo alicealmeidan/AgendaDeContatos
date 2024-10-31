@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -124,6 +124,15 @@ button:hover {
     margin: 10px 0;
 }
 
+.relembre{
+    padding-right: 8px;
+    padding-top: 10px;
+}
+
+#logarCom{
+    padding-top: 10px;
+}
+
 .checkbox-label {
     display: flex;
     align-items: center;
@@ -141,3 +150,4 @@ button:hover {
 .options button:hover {
     text-decoration: underline;
 }
+
