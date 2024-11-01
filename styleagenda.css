@@ -1,0 +1,119 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Estilo do cabeçalho */
+header {
+    background: linear-gradient(to bottom, #00aaff, #005577);
+    padding: 20px;
+    text-align: center;
+    align-items: center;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-photo {
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 2px solid #4682B4;
+}
+
+h1 {
+    color: #fff;
+    font-size: 24px;
+}
+
+/* Estilo do corpo principal */
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Lista de contatos */
+.contacts-list {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilo do formulário */
+.contact-form {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: #333;
+}
+
+.contact-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.contact-form button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #212535;
+    color: white;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #5f9db6;
+}
+
+/* Estilo de cada contato */
+.contact-item {
+    background: #e7f3fe;
+    border: 1px solid #d1e7fd;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.contact-item .contact-photo {
+    width: 40px;
+    height: 40px;
+    background-color: #d9edf7;
+    border-radius: 50%;
+    margin-right: 10px;
+}
