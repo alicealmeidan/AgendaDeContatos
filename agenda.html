@@ -10,18 +10,36 @@
 <body>
     <header>
         <div class="header-container">
-            <h1>AGENDA DE CONTATOS</h1>
+            <h1 id="title">AGENDA DE CONTATOS</h1>
             <div class="user-info">
                 <div class="user-photo"></div>
                 <div class="user-name">Nome do Usuário</div>
             </div>
-        </div>
     </header>
-    
-    <main class="container">
+
+    <nav id="sidebar" class="sidebar">
+        <ul>
+            <li id="menu-contacts">Contatos</li>
+            <li id="menu-frequent">Contatos Frequentes</li>
+            <li id="menu-labels">Marcadores</li>
+            <li id="menu-favorites">Favoritos</li>
+        </ul>
+    </nav>
+
+    <div class="sidebar">
+        <ul>
+            <li data-section="contacts">Contatos</li>
+            <li data-section="frequent">Contatos Frequentes</li>
+            <li data-section="labels">Marcadores</li>
+            <li data-section="favorites">Favoritos</li>
+        </ul>
+    </div>
+
+    <main class="container" id="main-content">
         <div id="contactsList" class="contacts-list">
             <!-- Contatos serão exibidos aqui -->
         </div>
+        
         
         <form id="contactForm" class="contact-form">
             <h2>Cadastrar Novo Contato</h2>
@@ -33,4 +51,5 @@
         </form>
     </main>
 </body>
+
 </html>
