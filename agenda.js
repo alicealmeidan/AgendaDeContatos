@@ -1,71 +1,100 @@
 // Seleciona elementos da página
 const mainContent = document.getElementById('main-content');
 const contactsList = document.getElementById('contactsList');
-
-// Adiciona event listeners para cada opção do menu
-const menuItems = document.querySelectorAll('.sidebar li');
-
-menuItems.forEach(item => {
-    item.addEventListener('click', () => {
-        // Remove a classe 'active' de todos os itens
-        menuItems.forEach(i => i.classList.remove('active'));
-        
-        // Adiciona a classe 'active' ao item clicado
-        item.classList.add('active');
-
-        // Mostra a seção apropriada
-        const section = item.getAttribute('data-section');
-        showSection(section);
-    });
-});
-
-// Função para mostrar a seção apropriada
-function showSection(section) {
-    contactsList.innerHTML = ''; // Limpa a lista atual
-    mainContent.querySelector('form').style.display = 'none'; // Esconde o formulário
-
-    if (section === 'contacts') {
-        mainContent.querySelector('form').style.display = 'block'; // Mostra o formulário
-    } else if (section === 'frequent') {
-        contactsList.innerHTML = '<h2>Contatos Frequentes</h2>';
-        // Aqui você pode preencher a lista de contatos frequentes
-    } else if (section === 'labels') {
-        contactsList.innerHTML = '<h2>Marcadores</h2>';
-        // Aqui você pode implementar a lógica de grupos
-    } else if (section === 'favorites') {
-        contactsList.innerHTML = '<h2>Favoritos</h2>';
-        // Aqui você pode implementar a lista de favoritos
-    }
-}
+const contactForm = document.getElementById('contactForm');
 
 // Adiciona o evento de submissão do formulário
-document.getElementById('contactForm').addEventListener('submit', function(e) {
+contactForm.addEventListener('submit', function (e) {
     e.preventDefault();
-    
+
     const nome = document.getElementById('nome').value;
     const telefone = document.getElementById('telefone').value;
     const email = document.getElementById('email').value;
     const foto = document.getElementById('foto').files[0];
 
+    // Cria um objeto de contato
+    const contato = {
+        nome: nome,
+        telefone: telefone,
+        email: email,
+        foto: foto ? URL.createObjectURL(foto) : 'default-photo.jpg'
+    };
+
+    // Salva o contato no localStorage
+    let contatos = JSON.parse(localStorage.getItem('contatos')) || [];
+    contatos.push(contato);
+    localStorage.setItem('contatos', JSON.stringify(contatos));
+
+    // Atualiza a lista de contatos na tela
+    adicionarContatoNaLista(contato);
+
+    // Limpa o formulário após a submissão
+    contactForm.reset();
+});
+
+// Função para exibir um contato na lista
+function adicionarContatoNaLista(contato) {
     const contactDiv = document.createElement('div');
     contactDiv.className = 'contact-item';
 
     contactDiv.innerHTML = `
-        <div class="contact-photo" style="background-image: url('${foto ? URL.createObjectURL(foto) : 'default-photo.jpg'}');"></div>
-        <span>${nome}</span>
+        <div class="contact-photo" style="background-image: url('${contato.foto}');"></div>
+        <span>${contato.nome}</span>
         <div class="contact-info" style="display: none;">
-            <strong>Telefone:</strong> ${telefone} <br>
-            <strong>E-mail:</strong> ${email}
+            <strong>Telefone:</strong> ${contato.telefone} <br>
+            <strong>E-mail:</strong> ${contato.email}
         </div>
     `;
-    
-    // Toggle details on click
-    contactDiv.addEventListener('click', function() {
+
+    // Toggle para exibir ou ocultar detalhes do contato
+    contactDiv.addEventListener('click', function () {
         const info = contactDiv.querySelector('.contact-info');
         info.style.display = info.style.display === 'block' ? 'none' : 'block';
     });
 
     contactsList.appendChild(contactDiv);
-    
-    this.reset(); // Limpa o formulário após a submissão
+}
+
+// Carrega os contatos salvos no localStorage ao carregar a página
+document.addEventListener('DOMContentLoaded', () => {
+    const contatos = JSON.parse(localStorage.getItem('contatos')) || [];
+    contatos.forEach(adicionarContatoNaLista);
 });
+
+// Função para exibir um contato na lista
+function adicionarContatoNaLista(contato) {
+    const contactDiv = document.createElement('div');
+    contactDiv.className = 'contact-item';
+
+    // Criação da imagem do contato
+    const contactImage = document.createElement('img');
+    contactImage.className = 'contact-photo';  // Aplique a classe para o estilo
+    contactImage.src = contato.foto || 'default-photo.jpg'; // Use uma foto padrão se não houver imagem
+    contactImage.alt = `${contato.nome}'s photo`;
+    contactImage.style.width = '50px'; // Ajuste o tamanho da imagem
+    contactImage.style.height = '50px'; // Ajuste o tamanho da imagem
+    contactImage.style.objectFit = 'cover'; // Faz a imagem se ajustar ao tamanho sem distorcer
+    contactImage.style.borderRadius = '50%'; // Faz a imagem redonda (opcional)
+
+    // Adiciona o nome e as informações de contato
+    contactDiv.appendChild(contactImage);
+    contactDiv.innerHTML += `<span>${contato.nome}</span>`;
+
+    const contactInfo = document.createElement('div');
+    contactInfo.className = 'contact-info';
+    contactInfo.style.display = 'none';  // Inicia com as informações ocultas
+    contactInfo.innerHTML = `
+        <strong>Telefone:</strong> ${contato.telefone} <br>
+        <strong>E-mail:</strong> ${contato.email}
+    `;
+    contactDiv.appendChild(contactInfo);
+
+    // Toggle para exibir ou ocultar detalhes do contato
+    contactDiv.addEventListener('click', function () {
+        contactInfo.style.display = contactInfo.style.display === 'block' ? 'none' : 'block';
+    });
+
+    contactsList.appendChild(contactDiv);
+}
+
+
