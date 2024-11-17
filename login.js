@@ -40,8 +40,8 @@ document.querySelector("form").addEventListener("submit", function (event) {
             localStorage.removeItem("senhaLembrada");
         }
 
-        // Redirecionar para a página principal ou dashboard
-        window.location.href = "dashboard.html";
+        // Redirecionar para a página principal da agenda
+        window.location.href = "agenda.html";
     } else {
         alert("E-mail ou senha incorretos.");
     }
