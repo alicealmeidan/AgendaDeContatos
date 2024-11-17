@@ -85,3 +85,9 @@ button {
 button:hover {
     background-color: #5f9db6;
 }
+
+.erro-email {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
