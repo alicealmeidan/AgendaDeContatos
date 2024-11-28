@@ -15,7 +15,9 @@
                 <div class="user-photo"></div>
                 <div class="user-name">Nome do Usuário</div>
             </div>
+        </div>
     </header>
+    
 
     <nav id="sidebar" class="sidebar">
         <ul>
@@ -36,13 +38,12 @@
     </div>
 
     <main class="container" id="main-content">
-        <div id="contactsList" class="contacts-list">
-            <!-- Contatos serão exibidos aqui -->
-        </div>
-        
-        
-        <form id="contactForm" class="contact-form">
+        <!-- Seção do Formulário -->
+        <div class="section-header">
             <h2>Cadastrar Novo Contato</h2>
+            <button id="toggleContactForm" class="toggle-button">⯅</button>
+        </div>
+        <form id="contactForm" class="contact-form">
             <input type="text" id="nome" name="nome" placeholder="Nome" required>
             <input type="text" id="telefone" name="telefone" placeholder="Telefone" required>
             <input type="email" id="email" name="email" placeholder="E-mail" required>
@@ -50,6 +51,18 @@
             <button type="submit">Salvar Contato</button>
         </form>
     </main>
+
+    <main class="container" id="main-content">
+        <!-- Seção da Lista de Contatos -->
+        <div class="section-header">
+            <h2>Lista de Contatos</h2>
+            <button id="toggleContactsList" class="toggle-button">⯅</button>
+        </div>
+        <div id="contactsList" class="contacts-list">
+            <!-- Contatos serão exibidos aqui -->
+        </div>
+    </main>
+    
 </body>
 
 </html>
