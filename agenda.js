@@ -143,3 +143,29 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('toggleContactsList').addEventListener('click', toggleContactsListVisibility);
     document.getElementById('contactForm').addEventListener('submit', handleFormSubmit);
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.getElementById('menuToggle');
+    const userMenu = document.getElementById('userMenu');
+
+    // Alternar visibilidade do menu
+    menuToggle.addEventListener('click', function() {
+        if (userMenu.style.display === 'none' || userMenu.style.display === '') {
+            userMenu.style.display = 'block'; // Exibe o menu
+            menuToggle.classList.add('expanded'); // Gira a seta
+        } else {
+            userMenu.style.display = 'none'; // Esconde o menu
+            menuToggle.classList.remove('expanded'); // Restaura a seta
+        }
+    });
+
+    // Ação dos botões do menu
+    document.getElementById('editProfile').addEventListener('click', function() {
+        alert('Abrir página de edição de perfil');
+    });
+
+    document.getElementById('logout').addEventListener('click', function() {
+        alert('Fazer logout');
+    });
+});
+
