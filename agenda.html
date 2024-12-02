@@ -14,11 +14,14 @@
             <div class="user-info">
                 <div class="user-photo"></div>
                 <div class="user-name">Nome do Usuário</div>
+                <button id="menuToggle" class="menu-toggle">⯆</button> <!-- Botão da seta -->
+                <div id="userMenu" class="user-menu">
+                    <a href="index.html"><button class="menu-item" id="logout">Sair</button></a>
+                </div>
             </div>
         </div>
     </header>
     
-
     <nav id="sidebar" class="sidebar">
         <ul>
             <li id="menu-contacts">Contatos</li>
@@ -27,15 +30,6 @@
             <li id="menu-favorites">Favoritos</li>
         </ul>
     </nav>
-
-    <div class="sidebar">
-        <ul>
-            <li data-section="contacts">Contatos</li>
-            <li data-section="frequent">Contatos Frequentes</li>
-            <li data-section="labels">Marcadores</li>
-            <li data-section="favorites">Favoritos</li>
-        </ul>
-    </div>
 
     <main class="container" id="main-content">
         <!-- Seção do Formulário -->
@@ -64,5 +58,4 @@
     </main>
     
 </body>
-
 </html>
