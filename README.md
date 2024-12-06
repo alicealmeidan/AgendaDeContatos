@@ -1,10 +1,10 @@
 # AgendaDeContatos
-Projeto criado como forma de avaliação para a disciplina Desenvolvimento Web II
+Projeto criado como forma de avaliação para a disciplina Desenvolvimento Web II e Engenharia de Software da turma TS451. 
 
-Este projeto é uma aplicação simples de Agenda de Contatos, onde os usuários podem gerenciar seus contatos. Ele utiliza HTML, CSS e JavaScript, com dados armazenados localmente no navegador usando o `localStorage`.
+Este projeto é uma aplicação simples de Agenda de Contatos, onde os usuários podem gerenciar seus contatos. Ele utiliza HTML, CSS e JavaScript, -----com dados armazenados localmente no navegador usando o `localStorage`----. Tem como principais tarefas o cadastro do usuário, login no sistema, cadastro de novos contatos, lista para visualização de contatos, onde é possível visualizar suas principais informções como foto, telefone e e-mail. O sistema também salva os contatos mais frequentes, além de permitir adicionar contatos cadastrados aos favoritos.
 
-# Funcionalidades
-- Cadastro de usuário: O cadastro de usuário permite criar uma conta com nome, telefone, e-mail e senha;
+# Funcionalidadades
+- Castro de usuário: O cadastro de usuário permite criar uma conta com nome, telefone, e-mail e senha;
 - Login: É necessário realizar o login com e-mail e senha para acessar suas informações. O login pode ser lembrado, caso selecione a checkbox 'relembre-me';
 - Adicionar contatos: Os usuários são capazes de adicionar novos contatos à agenda com nome, telefone, e-mail e foto, sendo esta última, opcional;
 - Menu lateral: O sistema possui um menu lateral onde se encontram as funções 'Contatos frequentes', 'Contatos', 'Favoritos' e 'Marcadores';
