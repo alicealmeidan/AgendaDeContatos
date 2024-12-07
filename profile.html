@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Usuário</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="profile-header">
+            <img id="profile-image" src="default-profile.jpg" alt="Foto de Perfil">
+            <button id="change-photo-btn">Alterar Foto de Perfil</button>
+        </div>
+
+        <form id="profile-form">
+            <div class="form-group">
+                <label for="username">Nome de Usuário:</label>
+                <input type="text" id="username" name="username" value="UsuarioExemplo123" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Número de Telefone:</label>
+                <input type="tel" id="phone" name="phone" value="+55 11 98765-4321" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" value="usuario@exemplo.com" required>
+            </div>
+
+            <button type="button" class="save-button" onclick="saveChanges()">Salvar Alterações</button>
+        </form>
+
+        <div class="profile-info">
+            <p><span>Nome de Usuário:</span> <span id="profile-username">UsuarioExemplo123</span></p>
+            <p><span>Número de Telefone:</span> <span id="profile-phone">+55 11 98765-4321</span></p>
+            <p><span>E-mail:</span> <span id="profile-email">usuario@exemplo.com</span></p>
+        </div>
+    </div>
+
+</body>
+</html>

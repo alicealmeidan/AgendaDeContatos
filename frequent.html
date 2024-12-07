@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contatos Frequentes</title>
+    <link rel="stylesheet" type="text/css" href="styleagenda.css" media="screen" />
+    <script src="agenda.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1 id="title">AGENDA DE CONTATOS</h1>
+            <div class="user-info">
+                <div class="user-photo"></div>
+                <div class="user-name">Nome do Usuário</div>
+                <button id="menuToggle" class="menu-toggle">⯆</button> <!-- Botão da seta -->
+                <div id="userMenu" class="user-menu">
+                    <a href="profile.html"><button class="menu-item" id="profile">Editar perfil</button></a>
+                    <a href="login.html"><button class="menu-item" id="logout">Sair</button></a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <nav id="sidebar" class="sidebar">
+        <ul>
+            <li id="menu-contacts"> <a href="agenda.html"> Contatos </a> </li>
+            <li id="menu-frequent"> <a href="frequent.html"> Contatos Frequentes</a> </li> 
+            <li id="menu-favorites"> <a href="favorites.html"> Favoritos </a>  </li>
+        </ul>
+    </nav>
+
+    <main class="container" id="main-content">
+        <!-- Seção da Lista de Contatos -->
+        <div class="section-header">
+            <h2>Lista de Contatos Frequentes</h2>
+            <button id="toggleContactsList" class="toggle-button">⯅</button>
+        </div>
+        <div id="contactsList" class="contacts-list">
+            <!-- Contatos serão exibidos aqui -->
+        </div>
+    </main>
+    
+</body>
+</html>

@@ -1,0 +1,320 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #e3e3e3;
+    font-family: Arial, sans-serif;
+    color: #333;
+    size: 100%;
+}
+
+
+header {
+    background: linear-gradient(to bottom, #00aaff, #005577);
+    padding: 20px;
+    text-align: center;
+    align-items: center;
+    position: relative; 
+    z-index: 1000; 
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+
+.user-photo {
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 2px solid #4682B4;
+}
+
+#title {
+    margin-left: 750px; 
+}
+
+.sidebar {
+    width: 250px;
+    background: #e3e3e3;
+    position: fixed; 
+    top: 70px; 
+    left: 0;
+    height: calc(100% - 70px); 
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 999; 
+}
+
+a {
+    color: rgb(0, 0, 0);  /* Define a cor do texto do link como branco */
+    text-decoration: none;  /* Remove o sublinhado do link (opcional) */
+}
+
+
+.sidebar ul {
+    list-style: none;
+    padding: 20px;
+}
+
+.sidebar li {
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Transição suave para o hover */
+}
+
+.sidebar li.active, /* Estilo para item ativo */
+.sidebar li:hover {
+    background-color: #666666; /* Fundo cinza mais escuro */
+    color: white; /* Texto branco */
+}
+
+
+.container {
+    margin-left: 270px; 
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background:linear-gradient(to bottom, #00aaff, #005577);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contacts-list {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-photo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    margin-right: 10px;
+    margin-top: 20px;
+}
+
+
+.contact-details {
+    display: none; /* Esconde os detalhes inicialmente */
+    margin-top: 5px;
+    font-size: 16px;
+}
+
+.contact-phone, .contact-email {
+    margin: 5px 0;
+}
+
+.contact-form {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: #333;
+}
+
+.contact-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.contact-form button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #212535;
+    color: white;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #5f9db6;
+}
+
+.contact-item {
+    background: #f9f9f9;
+    border: 1px solid #a6a6a6;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;  /* Altera a direção do layout para coluna */
+    align-items: flex-start; /* Alinha os itens no topo */
+}
+
+.toggle-button {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 5px; /* Espaçamento entre o nome/foto e a seta */
+    padding: 5px;
+}
+
+/* Estilo para os títulos das seções */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px 0;
+}
+
+/* Quando a seta for virada para cima, a seção será expandida */
+.toggle-button.expanded {
+    transform: rotate(180deg);
+}
+
+/* Estilo para as setas de cada contato */
+.contact-item .toggle-button {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    padding: 5px;
+    margin-left: 10px;
+}
+
+/* Quando a seta for virada para cima (expandida) */
+.contact-item .toggle-button.expanded {
+    transform: rotate(180deg); /* Inverte a seta */
+}
+
+/* Inicialmente escondido */
+.contact-form, .contacts-list {
+    display: none;  /* Inicialmente escondido */
+}
+
+/* Quando a seta for virada para cima, a seção será expandida */
+.toggle-button.expanded {
+    transform: rotate(180deg); /* Inverte a seta */
+}
+
+/* Estilo para as setas de cada contato */
+.contact-item .toggle-button {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    padding: 5px;
+    margin-left: 660px;
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+
+/* Quando a seta for virada para cima (expandida) */
+.contact-item .toggle-button.expanded {
+    transform: rotate(180deg); /* Inverte a seta */
+}
+
+.contact-item {
+    background: #f9f9f9;
+    border: 1px solid #a6a6a6;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    display: flex;
+    align-items: left;
+    justify-content: space-between;  /* Adicionado para espaço entre nome e lixeira */
+}
+
+
+.contact-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: -50px;
+    margin-top: -30px;
+    padding-left: 55px;
+ /* Faz o nome ocupar o restante do espaço */
+}
+
+.delete-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: #ff4c4c;
+    margin-left: 700px;
+    margin-top: 20px; /* Espaçamento entre a foto/nome e o botão de excluir */
+    margin-bottom: -20px;
+}
+
+.delete-button:hover {
+    color: #d62d2d;
+}
+
+.user-info {
+    display: flex;
+    align-items: left;
+    position: relative; /* Para posicionar o menu */
+}
+
+.user-name {
+    margin-right: 10px;
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.user-menu {
+    display: none; /* Inicialmente escondido */
+    position: absolute;
+    top: 40px; /* Ajuste a posição conforme necessário */
+    right: 0;
+    background-color: #e3e3e3ff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 10px;
+    z-index: 1001;
+}
+
+.user-menu .menu-item {
+    background: none;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    color: #333;
+}
+
+.user-menu .menu-item:hover {
+    background-color: #a6a6a6;
+}
+
+.menu-toggle.expanded {
+    transform: rotate(180deg); /* Inverte a seta quando o menu estiver aberto */
+}
+
