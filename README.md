@@ -1,9 +1,9 @@
-**# AgendaDeContatos**
+# AgendaDeContatos
 Projeto criado como forma de avaliação para a disciplina Desenvolvimento Web II e Engenharia de Software da turma TS451. 
 
 Este projeto é uma aplicação simples de Agenda de Contatos, onde os usuários podem gerenciar seus contatos. Ele utiliza HTML, CSS e JavaScript, ***com dados armazenados localmente no navegador usando o `localStorage`***. Tem como principais tarefas o cadastro do usuário, login no sistema, cadastro de novos contatos, lista para visualização de contatos, onde é possível visualizar suas principais informções como foto, telefone e e-mail. O sistema também salva os contatos mais frequentes, além de permitir adicionar contatos cadastrados aos favoritos.
 
-**# Funcionalidadades**
+# Funcionalidadades
 - Cadastro de usuário: O processo de cadastro permite criar uma conta informando nome, telefone, e-mail e senha, com a opção de adicionar uma foto;
 - Login: É necessário realizar o login com e-mail e senha para acessar suas informações. Você pode optar por salvar os dados de login nos campos correspondentes, marcando a opção "relembre-me" para facilitar o acesso em futuras visitas.
 - Adicionar contatos: Os usuários são capazes de adicionar novos contatos à agenda com nome, telefone, e-mail e foto, sendo esta última, opcional;
@@ -11,13 +11,13 @@ Este projeto é uma aplicação simples de Agenda de Contatos, onde os usuários
 ***- Anotações: O sistema terá uma área destinada à inclusão de notas sobre o contato. O preenchimento dele fica à critério do usuário;***
 - Armazenamento: Os dados do usuário e seus contatos são armazenados no 'localStorage', de forma que as informações persistam entre as sessões.
 
-**# Tecnologias utilizadas**
+# Tecnologias utilizadas
 HMTL: Estruturação da página;
 CSS: Estilos visuais para a interface;
 JavaScript: Interação das funcionalidades;
 ***LocalStorage: Armazenamento de dados no navegador para persistência entre as sessões.***
 
-**# Como utilizar**
+# Como utilizar
 **Cadastro de usuário:**
 - Na primeira página ('login.html'), clique em 'Criar conta';
 - Você será direcionado para a página 'cadastro.html';
