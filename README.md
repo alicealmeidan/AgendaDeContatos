@@ -18,26 +18,29 @@ JavaScript: Interação das funcionalidades;
 *LocalStorage: Armazenamento de dados no navegador para persistência entre as sessões.*
 
 # Como utilizar
-Cadastro de usuário:
+**Cadastro de usuário:**
 - Na primeira página ('login.html'), clique em 'Criar conta';
 - Você será direcionado para a página 'cadastro.html';
 - Preencha os campos com as informações adequadas;
 - Clique em 'cadastrar' para criar uma nova conta;
 - O usuário será logado automaticamente no sistema e redirecionado para 'agenda.html'.
 
-Login: 
+**Login:** 
 - Na primeira página ('login.html'), preencha os campos de 'e-mail' e 'senha' com as informações adequadas;
 - É possível salvar suas informações de login marcando a checkbox 'relembre-me', facilitando os proximos logins. Marcar essa opção é totalmente opcional;
 - As informações serão testadas. Caso estejam incorretas, o usuário será informado e não será possível logar no sistema. Se estiverem corretas, o usuário será logado no sistema e redirecionado para 'agenda.html'.
 
-Adicionar contatos:
+**Adicionar contatos:**
 - Após o login no sistema, será possível adicionar novos contatos;
 - Ao expandir o container 'Cadastrar Novo Contato', serão solicitadas informações como 'Nome', 'Telefone', 'E-mail' e uma foto que poderá ser adicionada, também, para identificar o contato. Ao clicar em 'salvar', as informações serão armazenadas no **LocalStorage**
 - Os contatos salvos poderão ser visualizados clicando em 'Lista de contatos'. Para exibir os detalhes, basta clicar na seta ao lado, expandindo o cartão do contato.
 - É possível remover contatos da lista, clicando no ícone de lixeira no cartão de cada contato;
-- EDITARRRRRRRR
+- Ao clicar no botão em formato de lápis ao lado do nome do contato, é possível editá-lo para alterar quaisquer informações que desejar.
 - Nessa tela também é possível visualizar qual usuário está logado. No canto superior direito exibirá o nome de usuário e sua foto. Ao clicar na seta ao lado o usuário poderá editar o perfil ou, ainda, deslogar do sistema clicando em 'sair'.
 - O menu localizado na lateral esquerda oferece as opções 'Contatos' (Tela atual), 'Contatos Frequentes' e 'Favoritos'.
 
-Contatos frequentes:
-- Nessa página serão exibidos os 5 contatos mais visualizados pelo usuário. As visualizações são contadas de acordo com os cliques
+**Contatos frequentes:**
+- Nessa página serão exibidos os 5 contatos mais visualizados pelo usuário. As visualizações são contadas de acordo com os cliques para exibir os detalhes dos contatos.
+
+**Favoritos:**
+Os contatos poderão ser sinaliuzados como favoritos ao clicar no botão em formato de coração, ao lado do nome do contato. Eles serão exibidos separadamente em uma aba direcionada a eles.
