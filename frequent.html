@@ -1,44 +1,52 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contatos Frequentes</title>
-    <link rel="stylesheet" type="text/css" href="styleagenda.css" media="screen" />
-    <script src="agenda.js" defer></script>
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Torna a página responsiva -->
+    <title>Contatos Frequentes</title> <!-- Título da página exibido no navegador -->
+    <link rel="stylesheet" type="text/css" href="stylefrequent.css" media="screen" /> <!-- Link para o CSS externo -->
+    <script src="frequent.js" defer></script> <!-- Script JavaScript externo com defer para carregar após o HTML -->
 </head>
 <body>
+    <!-- Cabeçalho principal da página -->
     <header>
         <div class="header-container">
+            <!-- Título da aplicação -->
             <h1 id="title">AGENDA DE CONTATOS</h1>
+            <!-- Informações do usuário -->
             <div class="user-info">
-                <div class="user-photo"></div>
-                <div class="user-name">Nome do Usuário</div>
-                <button id="menuToggle" class="menu-toggle">⯆</button> <!-- Botão da seta -->
-                <div id="userMenu" class="user-menu">
-                    <a href="profile.html"><button class="menu-item" id="profile">Editar perfil</button></a>
-                    <a href="login.html"><button class="menu-item" id="logout">Sair</button></a>
+                <div class="user-photo"></div> <!-- Espaço para foto do usuário -->
+                <div class="user-name">Nome do Usuário</div> <!-- Nome do usuário -->
+                <button id="menuToggle" class="menu-toggle">⯆</button> <!-- Botão de alternância para exibir o menu do usuário -->
+                <div id="userMenu" class="user-menu"> <!-- Menu suspenso do usuário -->
+                    <a href="agenda.html"><button class="menu-item" id="profile">Página Inicial</button></a> <!-- Link para a página inicial -->
+                    <a href="profile.html"><button class="menu-item" id="profile">Editar perfil</button></a> <!-- Link para edição de perfil -->
+                    <a href="login.html"><button class="menu-item" id="logout">Sair</button></a> <!-- Link para logout -->
                 </div>
             </div>
         </div>
     </header>
     
+    <!-- Barra lateral de navegação -->
     <nav id="sidebar" class="sidebar">
         <ul>
-            <li id="menu-contacts"> <a href="agenda.html"> Contatos </a> </li>
-            <li id="menu-frequent"> <a href="frequent.html"> Contatos Frequentes</a> </li> 
-            <li id="menu-favorites"> <a href="favorites.html"> Favoritos </a>  </li>
+            <!-- Links para diferentes seções da aplicação -->
+            <li id="menu-contacts"> <a href="agenda.html"> Contatos </a> </li> <!-- Link para a página de contatos -->
+            <li id="menu-frequent"> <a href="frequent.html"> Contatos Frequentes</a> </li> <!-- Link para contatos frequentes -->
+            <li id="menu-favorites"> <a href="favorites.html"> Favoritos </a>  </li> <!-- Link para contatos favoritos -->
         </ul>
     </nav>
 
+    <!-- Conteúdo principal da página -->
     <main class="container" id="main-content">
-        <!-- Seção da Lista de Contatos -->
+        <!-- Cabeçalho da seção de contatos -->
         <div class="section-header">
-            <h2>Lista de Contatos Frequentes</h2>
-            <button id="toggleContactsList" class="toggle-button">⯅</button>
+            <h2>Lista de Contatos Frequentes</h2> <!-- Título da seção -->
+            <button id="toggleContactsList" class="toggle-button">⯅</button> <!-- Botão para expandir ou recolher a lista de contatos -->
         </div>
+        <!-- Lista de contatos será exibida aqui -->
         <div id="contactsList" class="contacts-list">
-            <!-- Contatos serão exibidos aqui -->
+            <!-- Conteúdo dinâmico será inserido via JavaScript -->
         </div>
     </main>
     

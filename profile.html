@@ -1,43 +1,67 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br"> <!-- Define o idioma da página como português brasileiro -->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil de Usuário</title>
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura a visualização responsiva em dispositivos móveis -->
+    <title>Editar informações do usuário</title> <!-- Título da página exibido na aba do navegador -->
+    <link rel="stylesheet" type="text/css" href="styleprofile.css" media="screen" /> <!-- Link para o arquivo CSS que define o estilo da página -->
+    <script src="profile.js" defer></script> <!-- Link para o arquivo JavaScript, carregado após o HTML -->
 </head>
 <body>
+    <header>
+        <div class="header-container"> <!-- Contêiner para o cabeçalho -->
+            <h1 id="title">PÁGINA DO USUÁRIO</h1> <!-- Título principal da página -->
+            <div class="user-info"> <!-- Contêiner com as informações do usuário -->
+                <div class="user-photo"></div> <!-- Espaço para a foto do usuário -->
+                <div class="user-name">Nome do Usuário</div> <!-- Exibe o nome do usuário -->
+                <button id="menuToggle" class="menu-toggle">⯆</button> <!-- Botão para abrir/fechar o menu de opções do usuário -->
+                <div id="userMenu" class="user-menu"> <!-- Menu de opções do usuário (editar perfil e logout) -->
+                    <a href="agenda.html"><button class="menu-item" id="profile">Página Inicial</button></a> <!--Botão para a página inicial-->
+                    <a href="login.html"><button class="menu-item" id="logout">Sair</button></a> <!-- Link para sair da conta -->
+                </div>
+            </div>
+        </div>
+    </header>
 
-    <div class="container">
-        <div class="profile-header">
-            <img id="profile-image" src="default-profile.jpg" alt="Foto de Perfil">
-            <button id="change-photo-btn">Alterar Foto de Perfil</button>
+    <nav id="sidebar" class="sidebar"> <!-- Barra lateral de navegação -->
+        <ul> <!-- Lista de links de navegação -->
+            <li id="menu-contacts"> <a href="agenda.html"> Contatos </a> </li> <!-- Link para a página de contatos -->
+            <li id="menu-frequent"> <a href="frequent.html"> Contatos Frequentes</a> </li> <!-- Link para contatos frequentes -->
+            <li id="menu-favorites"> <a href="favorites.html"> Favoritos </a>  </li> <!-- Link para a página de favoritos -->
+        </ul>
+    </nav>
+
+    <div class="container"> <!-- Contêiner principal para o conteúdo da página -->
+        <div class="profile-header"> <!-- Cabeçalho da seção de perfil -->
+            <img id="profile-image" src="default-profile.jpg" alt="Foto de Perfil"> <!-- Exibe a foto de perfil -->
+            <button id="change-photo-btn">Alterar Foto de Perfil</button> <!-- Botão para alterar a foto de perfil -->
         </div>
 
-        <form id="profile-form">
-            <div class="form-group">
-                <label for="username">Nome de Usuário:</label>
-                <input type="text" id="username" name="username" value="UsuarioExemplo123" required>
+        <form id="profile-form"> <!-- Formulário para editar informações do usuário -->
+            <div class="form-group"> <!-- Contêiner para o campo do nome de usuário -->
+                <label for="username">Nome de Usuário:</label> <!-- Rótulo para o campo de nome -->
+                <input type="text" id="username" name="username" placeholder="UsuarioExemplo123" required> <!-- Campo de entrada para o nome de usuário -->
             </div>
 
-            <div class="form-group">
-                <label for="phone">Número de Telefone:</label>
-                <input type="tel" id="phone" name="phone" value="+55 11 98765-4321" required>
+            <div class="form-group"> <!-- Contêiner para o campo de telefone -->
+                <label for="phone">Número de Telefone:</label> <!-- Rótulo para o campo de telefone -->
+                <input type="tel" id="phone" name="phone" placeholder="+55 11 98765-4321" required> <!-- Campo de entrada para o número de telefone -->
             </div>
 
-            <div class="form-group">
-                <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" value="usuario@exemplo.com" required>
+            <div class="form-group"> <!-- Contêiner para o campo de e-mail -->
+                <label for="email">E-mail:</label> <!-- Rótulo para o campo de e-mail -->
+                <input type="email" id="email" name="email" placeholder="usuario@exemplo.com" required> <!-- Campo de entrada para o e-mail -->
             </div>
 
-            <button type="button" class="save-button" onclick="saveChanges()">Salvar Alterações</button>
+            <button type="button" class="save-button" onclick="saveChanges()">Salvar Alterações</button> <!-- Botão para salvar as alterações feitas -->
         </form>
 
-        <div class="profile-info">
-            <p><span>Nome de Usuário:</span> <span id="profile-username">UsuarioExemplo123</span></p>
-            <p><span>Número de Telefone:</span> <span id="profile-phone">+55 11 98765-4321</span></p>
-            <p><span>E-mail:</span> <span id="profile-email">usuario@exemplo.com</span></p>
+        <div class="profile-info"> <!-- Seção que exibe as informações atuais do usuário -->
+            <p><span>Nome de Usuário:</span> <span id="profile-username"></span></p> <!-- Exibe o nome de usuário -->
+            <p><span>Número de Telefone:</span> <span id="profile-phone"></span></p> <!-- Exibe o número de telefone -->
+            <p><span>E-mail:</span> <span id="profile-email"></span></p> <!-- Exibe o e-mail -->
         </div>
     </div>
-
+    
 </body>
 </html>

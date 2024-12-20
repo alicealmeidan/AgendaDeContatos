@@ -1,153 +1,211 @@
+/* Aplica a regra universal para todos os elementos */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    box-sizing: border-box; /* Garante que o padding e border sejam incluídos nas dimensões de largura e altura */
+    margin: 0; /* Remove a margem padrão de todos os elementos */
+    padding: 0; /* Remove o padding padrão de todos os elementos */
 }
 
+/* Estilos para o corpo da página */
 body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    height: 100vh;
+    font-family: Arial, sans-serif; /* Define a fonte principal como Arial, com fallback para sans-serif */
+    display: flex; /* Usa Flexbox para o layout */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    align-items: center; /* Centraliza os itens verticalmente */
+    text-align: center; /* Alinha o texto no centro */
+    height: 100vh; /* Define a altura como 100% da altura da viewport */
 }
 
+/* Estilos para o container principal */
 .container {
-    display: flex;
-    width: 80%;
-    max-width: 1200px;
-    margin: auto;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(20, 34, 73, 0.1);
+    display: flex; /* Usa Flexbox para o layout do container */
+    width: 80%; /* Define a largura do container como 80% da largura da tela */
+    max-width: 1200px; /* Define uma largura máxima de 1200px */
+    margin: auto; /* Centraliza o container */
+    border-radius: 10px; /* Bordas arredondadas para o container */
+    box-shadow: 0 2px 10px rgba(20, 34, 73, 0.1); /* Adiciona uma sombra suave ao container */
 }
 
+/* Estilos para a seção "createleft" (lado esquerdo do container) */
 .createleft, .loginright {
-    width: 50%;
-    padding: 20px;
+    width: 50%; /* Define a largura de cada seção como 50% do container */
+    padding: 20px; /* Aplica um padding de 20px */
 }
 
+/* Estilos para o lado esquerdo do container */
 .createleft {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    height: auto;
-    background: linear-gradient(to bottom, #00aaff, #005577);
-    border-right: 2px solid #ccc;
-    border-radius: 10px 0 0 10px;
-    padding: 20px;
+    display: flex; /* Usa Flexbox para o layout */
+    flex-direction: column; /* Organiza os itens na vertical */
+    justify-content: space-between; /* Espaça os itens igualmente */
+    align-items: center; /* Alinha os itens no centro */
+    height: auto; /* Altura automática para o elemento */
+    background: linear-gradient(to bottom, #00aaff, #005577); /* Fundo com gradiente de azul claro para escuro */
+    border-right: 2px solid #ccc; /* Borda à direita */
+    border-radius: 10px 0 0 10px; /* Bordas arredondadas no canto superior esquerdo e inferior esquerdo */
 }
 
+/* Estilos para a imagem de fundo (placeholder) na seção "createleft" */
 .image-placeholder {
-    flex: 1;
-    background: url('sua-imagem.jpg') no-repeat center center;
-    background-size: cover;
-    margin-bottom: 20px;
+    flex: 1; /* Permite que a imagem de fundo ocupe o espaço disponível */
+    background: url('sua-imagem.jpg') no-repeat center center; /* Define a imagem de fundo */
+    background-size: cover; /* Faz a imagem cobrir todo o espaço disponível */
+    margin-bottom: 20px; /* Espaçamento abaixo da imagem */
 }
 
+/* Estilos para o título e subtítulo na seção "createleft" */
 .createleft h1 {
-    margin-top: 35px;
+    margin-top: 35px; /* Espaçamento superior */
 }
 
 .createleft h4 {
-    margin-top: auto;
+    margin-top: auto; /* Empurra o subtítulo para a parte inferior */
 }
 
+/* Estilos para o botão na seção "createleft" */
 .createleft button {
-    margin-top: 10px;
-    margin-bottom: 40px;
+    margin-top: 10px; /* Espaçamento superior */
+    margin-bottom: 40px; /* Espaçamento inferior */
 }
 
+/* Estilos para o lado direito do container */
 .loginright {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: auto;
-    background: linear-gradient(to bottom, #fffefe, #dfdede);
-    border-radius: 0 10px 10px 0;
-    padding: 55px;
+    display: flex; /* Usa Flexbox para o layout */
+    flex-direction: column; /* Organiza os itens na vertical */
+    justify-content: center; /* Centraliza os itens verticalmente */
+    height: auto; /* Altura automática para o elemento */
+    background: linear-gradient(to bottom, #fffefe, #dfdede); /* Fundo com gradiente claro */
+    border-radius: 0 10px 10px 0; /* Bordas arredondadas no canto superior direito e inferior direito */
+    padding: 55px; /* Padding extra para a seção */
 }
 
+/* Estilos para os títulos no lado direito */
 h1 {
-    margin-bottom: 10px;
+    margin-bottom: 10px; /* Espaçamento inferior */
 }
 
 h4 {
-    margin: 10px 0;
+    margin: 10px 0; /* Espaçamento superior e inferior */
 }
 
+/* Estilos para os rótulos dos campos de entrada */
 label {
-    display: block;
-    margin: 10px 0 5px;
-    padding-left: 30px;
-    text-align: left;
+    display: block; /* Exibe os rótulos como blocos */
+    margin: 10px 0 5px; /* Espaçamento acima e abaixo do rótulo */
+    padding-left: 30px; /* Adiciona um pouco de padding à esquerda */
+    text-align: left; /* Alinha o texto do rótulo à esquerda */
 }
 
+/* Estilos para os campos de entrada */
 input[type="email"],
 input[type="password"],
 input[type="text"] {
-    width: 90%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    width: 90%; /* Largura dos campos de entrada */
+    padding: 10px; /* Padding interno dos campos */
+    margin-bottom: 15px; /* Espaçamento abaixo dos campos */
+    border: 1px solid #ccc; /* Borda do campo de entrada */
+    border-radius: 5px; /* Bordas arredondadas para os campos */
 }
 
+/* Estilos para os placeholders nos campos de entrada */
 input::placeholder {
-    color: rgba(0, 0, 0, 0.5);
-    opacity: 1;
+    color: rgba(0, 0, 0, 0.5); /* Cor do texto do placeholder */
+    opacity: 1; /* Garantir que o placeholder tenha 100% de opacidade */
 }
 
+/* Estilos para os campos de entrada quando o usuário passa o mouse */
 input:hover {
-    background-color: #d6d6d6;
+    background-color: #d6d6d6; /* Altera a cor de fundo ao passar o mouse */
 }
 
+/* Estilos para os botões */
 button {
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #212535;
-    color: white;
-    border: none;
-    border-radius: 40px;
-    cursor: pointer;
+    margin-top: 10px; /* Espaçamento superior */
+    padding: 10px 20px; /* Padding interno do botão */
+    background-color: #212535; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    border: none; /* Remove a borda do botão */
+    border-radius: 40px; /* Bordas arredondadas */
+    cursor: pointer; /* Altera o cursor para indicar que o botão é clicável */
 }
 
+/* Estilos para o botão ao passar o mouse */
 button:hover {
-    background-color: #5f9db6;
+    background-color: #5f9db6; /* Altera a cor de fundo do botão ao passar o mouse */
 }
 
+/* Estilos para a seção de opções (esqueceu a senha, etc.) */
 .options {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 10px 0;
+    display: flex; /* Usa Flexbox para o layout */
+    flex-direction: column; /* Organiza os itens na vertical */
+    align-items: center; /* Centraliza os itens */
+    margin: 10px 0; /* Espaçamento ao redor */
 }
 
-.relembre{
-    padding-right: 2px;
-    padding-top: 10px;
+/* Estilos para a caixa de seleção "Relembre-me" */
+.relembre {
+    padding-right: 2px; /* Ajusta o padding à direita */
+    padding-top: 10px; /* Ajusta o padding superior */
 }
 
-#logarCom{
-    padding-top: 10px;
+/* Estilos para o título "Logar com" */
+#logarCom {
+    padding-top: 10px; /* Espaçamento superior */
 }
 
+/* Estilos para o rótulo da caixa de seleção */
 .checkbox-label {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 10px;
+    display: flex; /* Exibe a caixa de seleção e o texto lado a lado */
+    align-items: center; /* Alinha os itens verticalmente */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    margin-bottom: 10px; /* Espaçamento inferior */
 }
 
+/* Estilos para os botões de opções (Facebook, Google) */
 .options button {
-    background-color: transparent;
-    color: #000000;
-    border: none;
-    cursor: pointer;
+    background-color: transparent; /* Fundo transparente para os botões */
+    color: #000000; /* Cor do texto dos botões */
+    border: none; /* Remove a borda */
+    cursor: pointer; /* Altera o cursor para indicar que o botão é clicável */
 }
 
+/* Estilos para os botões de opções ao passar o mouse */
 .options button:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* Adiciona um sublinhado quando o mouse passa por cima */
 }
 
+
+/* Responsividade para telas menores */
+@media (max-width: 1200px) {
+    .container {
+      width: 90%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    /* Para tablets e telas menores */
+    header, footer {
+      padding: 15px;
+    }
+  
+    .container {
+      width: 95%;
+    }
+  
+    main {
+      padding: 15px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    /* Para celulares */
+    header, footer {
+      padding: 10px;
+    }
+  
+    .container {
+      width: 100%;
+    }
+  
+    main {
+      padding: 10px;
+    }
+  }

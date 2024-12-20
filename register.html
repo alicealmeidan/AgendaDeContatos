@@ -1,41 +1,52 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<!DOCTYPE html> <!-- Declaração do tipo de documento, informando que é um documento HTML5 -->
+<html lang="pt-br"> <!-- Define o idioma da página como português (Brasil) -->
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro - Agenda de Contatos</title>
-    <link rel="stylesheet" type="text/css" href="styleregister.css" media="screen" />
-    <script src="register.js" defer></script>
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 para suportar caracteres especiais -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Torna a página responsiva para dispositivos móveis -->
+    <title>Cadastro - Agenda de Contatos</title> <!-- Título da página exibido na aba do navegador -->
+    <link rel="stylesheet" type="text/css" href="styleregister.css" media="screen" /> <!-- Link para o arquivo CSS de estilo -->
+    <script src="register.js" defer></script> <!-- Link para o arquivo JavaScript, carregado de forma assíncrona após o carregamento da página -->
 </head>
 
 <body>
-    <div class="container">
-        <div class="createleft">
-            <h1>CRIE SUA CONTA</h1>
-            <form>
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" placeholder="Insira seu nome" required>
-                
-                <label for="telefone">Telefone:</label>
-                <input type="text" id="telefone" name="telefone" placeholder="Insira seu telefone" required>
-                
-                <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" placeholder="Insira seu e-mail" required>
-                
-                <label for="senha">Senha:</label>
-                <input type="password" id="senha" name="senha" placeholder="Crie uma senha" required>
-                
-                <label for="confirmar-senha">Confirmar Senha:</label>
-                <input type="password" id="confirmar-senha" name="confirmar-senha" placeholder="Confirme sua senha" required>
+    <div class="container"> <!-- Contêiner principal que envolve as seções de cadastro e login -->
 
-                <button type="submit">Cadastrar</button>
+        <!-- Seção de cadastro -->
+        <div class="createleft">
+            <h1>CRIE SUA CONTA</h1> <!-- Título da seção de cadastro -->
+            <form> <!-- Início do formulário de cadastro -->
+                <!-- Campo de entrada para o nome -->
+                <label for="nome">Nome:</label> <!-- Rótulo do campo de entrada de nome -->
+                <input type="text" id="nome" name="nome" placeholder="Insira seu nome" required> <!-- Campo para inserir o nome, com placeholder e atributo required -->
+                
+                <!-- Campo de entrada para o telefone -->
+                <label for="telefone">Telefone:</label> <!-- Rótulo do campo de entrada de telefone -->
+                <input type="text" id="telefone" name="telefone" placeholder="Insira seu telefone" required> <!-- Campo para inserir o telefone, com placeholder e atributo required -->
+                
+                <!-- Campo de entrada para o e-mail -->
+                <label for="email">E-mail:</label> <!-- Rótulo do campo de entrada de e-mail -->
+                <input type="email" id="email" name="email" placeholder="Insira seu e-mail" required> <!-- Campo para inserir o e-mail, com placeholder e atributo required -->
+                
+                <!-- Campo de entrada para a senha -->
+                <label for="senha">Senha:</label> <!-- Rótulo do campo de entrada de senha -->
+                <input type="password" id="senha" name="senha" placeholder="Crie uma senha" required> <!-- Campo para inserir a senha, com placeholder e atributo required -->
+                
+                <!-- Campo de entrada para confirmar a senha -->
+                <label for="confirmar-senha">Confirmar Senha:</label> <!-- Rótulo do campo de confirmação de senha -->
+                <input type="password" id="confirmar-senha" name="confirmar-senha" placeholder="Confirme sua senha" required> <!-- Campo para confirmar a senha, com placeholder e atributo required -->
+
+                <!-- Botão para submeter o formulário -->
+                <button type="submit">Cadastrar</button> <!-- Botão de submit para enviar os dados do formulário -->
             </form>
         </div>
 
+        <!-- Seção de login -->
         <div class="loginright">
-            <h4>JÁ POSSUI UMA CONTA?</h4>
-            <a href="login.html"><button onclick="window.location.href='login.html'">Faça o Login</button></a>
+            <h4>JÁ POSSUI UMA CONTA?</h4> <!-- Subtítulo incentivando o usuário a fazer login -->
+            <a href="login.html"><button onclick="window.location.href='login.html'">Faça o Login</button></a> <!-- Link para a página de login, com botão para redirecionamento -->
         </div>
     </div>
 </body>
+
 </html>

@@ -1,29 +1,47 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <!-- Definição do conjunto de caracteres e da escala de visualização para dispositivos móveis -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Título da página exibido na aba do navegador -->
     <title>Agenda de Contatos</title>
+    
+    <!-- Link para o arquivo de estilo CSS -->
     <link rel="stylesheet" type="text/css" href="styleagenda.css" media="screen" />
+    
+    <!-- Link para o arquivo JavaScript que será carregado de forma assíncrona -->
     <script src="agenda.js" defer></script>
 </head>
 <body>
+    <!-- Cabeçalho da página -->
     <header>
         <div class="header-container">
+            <!-- Título da página principal -->
             <h1 id="title">AGENDA DE CONTATOS</h1>
+            
+            <!-- Informações do usuário -->
             <div class="user-info">
+                <!-- Espaço para a foto do usuário -->
                 <div class="user-photo"></div>
+                
+                <!-- Nome do usuário -->
                 <div class="user-name">Nome do Usuário</div>
+                
+                <!-- Botão para abrir/fechar o menu de opções -->
                 <button id="menuToggle" class="menu-toggle">⯆</button>
+                
+                <!-- Menu de usuário que contém links para editar o perfil e sair -->
                 <div id="userMenu" class="user-menu">
                     <a href="profile.html"><button class="menu-item" id="profile">Editar perfil</button></a>
                     <a href="login.html"><button class="menu-item" id="logout">Sair</button></a>
                 </div>
             </div>
-            
         </div>
     </header>
     
+    <!-- Barra de navegação lateral com links para as páginas de Contatos, Contatos Frequentes e Favoritos -->
     <nav id="sidebar" class="sidebar">
         <ul>
             <li id="menu-contacts"> <a href="agenda.html"> Contatos </a> </li>
@@ -32,29 +50,46 @@
         </ul>
     </nav>
 
+    <!-- Conteúdo principal da página -->
     <main class="container" id="main-content">
-        <!-- Seção do Formulário -->
+        <!-- Seção para cadastrar um novo contato -->
         <div class="section-header">
             <h2>Cadastrar Novo Contato</h2>
+            <!-- Botão para alternar a exibição do formulário de contato -->
             <button id="toggleContactForm" class="toggle-button">⯅</button>
         </div>
+        
+        <!-- Formulário de cadastro de novo contato -->
         <form id="contactForm" class="contact-form">
+            <!-- Campo para o nome do contato -->
             <input type="text" id="nome" name="nome" placeholder="Nome" required>
+            
+            <!-- Campo para o telefone do contato -->
             <input type="text" id="telefone" name="telefone" placeholder="Telefone" required>
+            
+            <!-- Campo para o e-mail do contato -->
             <input type="email" id="email" name="email" placeholder="E-mail" required>
+            
+            <!-- Campo para a foto do contato -->
             <input type="file" id="foto" name="foto" accept="image/*">
+            
+            <!-- Botão para salvar o novo contato -->
             <button type="submit">Salvar Contato</button>
         </form>
     </main>
 
+    <!-- Seção para listar os contatos cadastrados -->
     <main class="container" id="main-content">
         <div class="section-header">
             <h2>Lista de Contatos</h2>
+            <!-- Botão para alternar a exibição da lista de contatos -->
             <button id="toggleContactsList" class="toggle-button">⯅</button>
         </div>
+        
+        <!-- Área onde os contatos serão listados -->
         <div id="contactsList" class="contacts-list">
         </div>
     </main>
-    
+
 </body>
 </html>

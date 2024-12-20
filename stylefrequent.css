@@ -120,48 +120,6 @@ a {
     margin: 5px 0;
 }
 
-/* Estilo para o formulário de contato */
-.contact-form {
-    background: #f9f9f9; /* Cor de fundo clara */
-    padding: 20px; /* Espaçamento interno */
-    border-radius: 8px; /* Cantos arredondados */
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
-}
-
-/* Estilo para o título do formulário */
-.contact-form h2 {
-    margin-bottom: 15px;
-    font-size: 20px;
-    color: #333; /* Cor escura */
-}
-
-/* Estilo para os campos do formulário */
-.contact-form input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc; /* Borda clara */
-    border-radius: 4px; /* Bordas arredondadas */
-    font-size: 16px;
-}
-
-/* Estilo para o botão do formulário */
-.contact-form button {
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #212535; /* Cor escura para o fundo */
-    color: white;
-    border: none;
-    border-radius: 40px; /* Bordas arredondadas */
-    cursor: pointer; /* Aparece como um cursor de clique */
-    transition: background-color 0.3s ease; /* Transição suave */
-}
-
-/* Estilo para o botão do formulário ao passar o mouse */
-.contact-form button:hover {
-    background-color: #5f9db6; /* Cor mais clara ao passar o mouse */
-}
-
 /* Estilo para cada item de contato */
 .contact-item {
     background: #f9f9f9; /* Cor de fundo clara */
@@ -203,8 +161,8 @@ a {
     transform: rotate(180deg); /* Gira o ícone */
 }
 
-/* Esconde o formulário de contato e a lista de contatos por padrão */
-.contact-form, .contacts-list {
+/* Esconde a lista de contatos por padrão */
+.contacts-list {
     display: none;
 }
 
@@ -228,23 +186,6 @@ a {
     margin-bottom: -50px;
     margin-top: -30px;
     padding-left: 55px;
-}
-
-/* Estilo para o botão de exclusão */
-.delete-button {
-    background: none;
-    border: none;
-    cursor: pointer; /* Aparece como um cursor de clique */
-    font-size: 20px;
-    color: #ff4c4c; /* Cor vermelha */
-    margin-left: 650px;
-    margin-top: 20px;
-    margin-bottom: -28px;
-}
-
-/* Estilo para o botão de exclusão ao passar o mouse */
-.delete-button:hover {
-    color: #d62d2d; /* Cor mais intensa ao passar o mouse */
 }
 
 /* Estilo para as informações do usuário */
@@ -301,37 +242,6 @@ a {
 /* Rotaciona o botão de alternância do menu */
 .menu-toggle.expanded {
     transform: rotate(180deg);
-}
-
-/* Estilos para os botões de editar e favoritos */
-.edit-button, .favorite-button {
-    background: none;
-    border: none;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-/* Estilo para os botões de editar e favoritos ao passar o mouse */
-.edit-button:hover, .favorite-button:hover {
-    color: #000000; /* Muda a cor para preta */
-}
-
-/* Estilo para o botão de favoritos */
-.favorite-button {
-    color: #000000;
-    margin-left: 574px;
-    margin-top: -28px;
-}
-
-/* Estilo para o botão de favoritos ao passar o mouse */
-.favorite-button:hover {
-    color: #e74c3c; /* Cor vermelha ao passar o mouse */
-}
-
-/* Estilo para o botão de edição */
-.edit-button {
-    color: #000000;
-    margin-left: 612px;
 }
 
 /* Responsividade para telas menores */

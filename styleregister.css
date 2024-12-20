@@ -1,93 +1,143 @@
+/* A primeira regra aplica as mesmas configurações de estilo a todos os elementos da página, como o uso do box-sizing, que define que o padding e border sejam incluídos no cálculo do tamanho total do elemento. Além disso, define que não haverá margens ou preenchimentos padrão nos elementos. */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    box-sizing: border-box; /* Inclui o padding e a borda no cálculo do tamanho total do elemento */
+    margin: 0; /* Remove as margens padrão */
+    padding: 0; /* Remove o preenchimento padrão */
 }
 
+/* O estilo para o corpo da página. A propriedade "display: flex" cria um layout flexível. Os itens dentro do corpo são centralizados horizontal e verticalmente (com "justify-content" e "align-items"). A altura é definida como 100vh (100% da altura da janela de visualização). */
 body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    height: 100vh;
+    font-family: Arial, sans-serif; /* Define a fonte do corpo */
+    display: flex; /* Habilita o layout flexível */
+    justify-content: center; /* Alinha horizontalmente os itens ao centro */
+    align-items: center; /* Alinha verticalmente os itens ao centro */
+    text-align: center; /* Define o alinhamento do texto */
+    height: 100vh; /* Define a altura do corpo para 100% da altura da janela de visualização */
 }
 
+/* Define o estilo do contêiner principal. Ele usa um layout flexível e ocupa 80% da largura da tela, com um limite de largura máxima de 1200px. Também aplica uma borda arredondada e uma sombra suave ao redor. */
 .container {
-    display: flex;
-    width: 80%;
-    max-width: 1200px;
-    margin: auto;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(20, 34, 73, 0.1);
+    display: flex; /* Usa o layout flexível */
+    width: 80%; /* Ocupa 80% da largura da tela */
+    max-width: 1200px; /* Limita a largura máxima do contêiner */
+    margin: auto; /* Centraliza o contêiner horizontalmente */
+    border-radius: 10px; /* Aplica bordas arredondadas ao contêiner */
+    box-shadow: 0 2px 10px rgba(20, 34, 73, 0.1); /* Aplica uma sombra suave ao redor do contêiner */
 }
 
+/* Define o estilo das duas seções internas do contêiner, que ocupam 50% da largura cada uma. Ambas têm um preenchimento de 20px. */
 .createleft, .loginright {
-    width: 50%;
-    padding: 20px;
+    width: 50%; /* Cada seção ocupa 50% da largura do contêiner */
+    padding: 20px; /* Aplica um preenchimento de 20px em todas as direções */
 }
 
+/* Estilo da seção 'createleft', que possui um gradiente de fundo, alinhamento de conteúdo em coluna e bordas arredondadas. */
 .createleft {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(to bottom, #00aaff, #005577);
-    border-right: 2px solid #ccc;
-    border-radius: 10px 0 0 10px;
+    display: flex; /* Usa o layout flexível */
+    flex-direction: column; /* Organiza os itens em uma coluna */
+    justify-content: center; /* Alinha os itens verticalmente ao centro */
+    align-items: center; /* Alinha os itens horizontalmente ao centro */
+    background: linear-gradient(to bottom, #00aaff, #005577); /* Aplica um gradiente de fundo */
+    border-right: 2px solid #ccc; /* Aplica uma borda direita de 2px */
+    border-radius: 10px 0 0 10px; /* Aplica bordas arredondadas na parte superior e inferior à esquerda */
 }
 
+/* Estilo da seção 'loginright', que possui um gradiente de fundo, alinhamento de conteúdo e bordas arredondadas. */
 .loginright {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: auto;
-    background: linear-gradient(to bottom, #fffefe, #dfdede);
-    border-radius: 0 10px 10px 0;
-    padding: 55px;
+    display: flex; /* Usa o layout flexível */
+    flex-direction: column; /* Organiza os itens em uma coluna */
+    justify-content: center; /* Alinha os itens verticalmente ao centro */
+    height: auto; /* Define a altura automaticamente */
+    background: linear-gradient(to bottom, #fffefe, #dfdede); /* Aplica um gradiente de fundo */
+    border-radius: 0 10px 10px 0; /* Aplica bordas arredondadas na parte superior e inferior à direita */
+    padding: 55px; /* Aplica um preenchimento de 55px */
 }
 
+/* Estilo do título 'h1' com uma margem inferior de 20px para separação */
 h1 {
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* Cria uma margem abaixo do título */
 }
 
+/* Estilo do subtítulo 'h4', com margens acima e abaixo do texto */
 h4 {
-    margin: 20px 0 10px;
+    margin: 20px 0 10px; /* Margem superior de 20px, inferior de 10px */
 }
 
+/* Estilo dos rótulos (labels) do formulário, com alinhamento à esquerda e uma margem entre o texto e os campos */
 label {
-    display: block;
-    margin: 10px 0 5px;
-    text-align: left;
+    display: block; /* Faz o label ocupar uma linha inteira */
+    margin: 10px 0 5px; /* Margem superior de 10px e inferior de 5px */
+    text-align: left; /* Alinha o texto à esquerda */
 }
 
+/* Estilo dos campos de entrada de texto, e-mail e senha. Define o tamanho, o preenchimento, a borda e o arredondamento */
 input[type="text"],
 input[type="email"],
 input[type="password"] {
-    width: 90%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    width: 90%; /* Define a largura do campo como 90% do contêiner */
+    padding: 10px; /* Define o preenchimento interno do campo */
+    margin-bottom: 15px; /* Aplica uma margem inferior de 15px */
+    border: 1px solid #ccc; /* Aplica uma borda de 1px com a cor cinza */
+    border-radius: 5px; /* Arredonda os cantos da borda */
 }
 
+/* Estilo dos botões, incluindo um fundo escuro, texto branco e bordas arredondadas. Também define a transição de cor ao passar o mouse sobre o botão */
 button {
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #212535;
-    color: white;
-    border: none;
-    border-radius: 40px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    margin-top: 10px; /* Aplica uma margem superior de 10px */
+    padding: 10px 20px; /* Aplica um preenchimento interno de 10px em cima e 20px nos lados */
+    background-color: #212535; /* Cor de fundo escura */
+    color: white; /* Texto na cor branca */
+    border: none; /* Remove a borda padrão */
+    border-radius: 40px; /* Aplica bordas arredondadas */
+    cursor: pointer; /* Altera o cursor para uma mãozinha ao passar sobre o botão */
+    transition: background-color 0.3s ease; /* Aplica uma transição suave na cor de fundo */
 }
 
+/* Estilo para o estado de hover (quando o mouse passa sobre o botão). Altera a cor de fundo para um tom mais claro. */
 button:hover {
-    background-color: #5f9db6;
+    background-color: #5f9db6; /* Muda a cor de fundo para um tom mais claro ao passar o mouse */
 }
 
+/* Estilo da mensagem de erro do e-mail, que exibe a mensagem em vermelho e define o tamanho da fonte e a margem */
 .erro-email {
-    color: red;
-    font-size: 0.9em;
-    margin-top: 5px;
+    color: red; /* Cor do texto em vermelho */
+    font-size: 0.9em; /* Tamanho da fonte reduzido */
+    margin-top: 5px; /* Aplica uma margem superior de 5px */
 }
+
+/* Responsividade para telas menores */
+@media (max-width: 1200px) {
+    .container {
+      width: 90%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    /* Para tablets e telas menores */
+    header, footer {
+      padding: 15px;
+    }
+  
+    .container {
+      width: 95%;
+    }
+  
+    main {
+      padding: 15px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    /* Para celulares */
+    header, footer {
+      padding: 10px;
+    }
+  
+    .container {
+      width: 100%;
+    }
+  
+    main {
+      padding: 10px;
+    }
+  }

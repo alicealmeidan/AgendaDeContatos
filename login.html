@@ -1,44 +1,67 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <!-- Define o conjunto de caracteres e a visualização responsiva -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Inclui o script JavaScript para a agenda -->
     <script src="agenda.js" defer></script>
+
+    <!-- Define o estilo da página de login -->
     <link rel="stylesheet" type="text/css" href="stylelogin.css" media="screen" />
+
+    <!-- Inclui o script JavaScript para o login -->
     <script src="login.js" defer></script>
 </head>
 
 <body>
+    <!-- Contêiner principal da página de login -->
     <div class="container">
+        <!-- Lado esquerdo da página com informações de boas-vindas -->
         <div class="createleft">
+            <!-- Título de boas-vindas -->
             <h1>BEM VINDO</h1>
+            
+            <!-- Placeholder para imagem, provavelmente para um logotipo ou ilustração -->
             <div class="image-placeholder"></div> 
+
+            <!-- Subtítulo e link para cadastro de nova conta -->
             <h4>Cadastre-se:</h4>
             <a href="register.html"><button>Criar conta</button></a>
         </div>
         
+        <!-- Lado direito da página com o formulário de login -->
         <div class="loginright">
+            <!-- Título do formulário de login -->
             <h1>FAÇA O LOGIN</h1>
             <form>
+                <!-- Campo de entrada para o e-mail -->
                 <label for="email">E-mail:</label>
                 <input type="email" id="email" name="email" placeholder="Insira seu e-mail" required>
                 
+                <!-- Campo de entrada para a senha -->
                 <label for="senha">Senha:</label>
                 <input type="password" id="senha" name="senha" placeholder="Insira sua senha" required>
                 
+                <!-- Caixa de seleção para "Relembre-me" (lembre-se do usuário) -->
                 <div class="relembre">
                     <input type="checkbox" class="relembre" name="relembre" checked>
                     Relembre-me
                 </div>
 
+                <!-- Opções de recuperação de senha -->
                 <div class="options">
                     <button type="button">Esqueceu a senha?</button>
                 </div>
                             
-                
+                <!-- Botão de envio do formulário de login -->
                 <button type="submit" id="entrar">Entrar</button>
                 
+                <!-- Texto que indica outras opções de login -->
                 <h4 id="logarCom">Logar com:</h4>
+                
+                <!-- Botões para logar com redes sociais -->
                 <button type="button">Facebook</button>
                 <button type="button">Google</button>
             </form>
