@@ -43,4 +43,4 @@ JavaScript: Interação das funcionalidades;
 - Nessa página serão exibidos os 5 contatos mais visualizados pelo usuário. As visualizações são contadas de acordo com os cliques para exibir os detalhes dos contatos.
 
 **Favoritos:**
-Os contatos poderão ser sinaliuzados como favoritos ao clicar no botão em formato de coração, ao lado do nome do contato. Eles serão exibidos separadamente em uma aba direcionada a eles.
+Os contatos poderão ser sinalizados como favoritos ao clicar no botão em formato de coração, ao lado do nome do contato. Eles serão exibidos separadamente em uma aba direcionada a eles.
